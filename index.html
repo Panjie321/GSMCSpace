@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSMC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .level {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        .node {
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin: 0 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            position: relative;
+            cursor: pointer; /* 改变鼠标指针 */
+            text-decoration: none; /* 移除下划线 */
+            transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
+        }
+        .level-1 .node {
+            background-color: #2196F3; /* 工厂 */
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 25px;
+        }
+        .level-2 .node {
+            background-color: #2196F3; /* Level 2 节点背景色 */
+            color: white; /* Level 2 节点文本色 */
+            font-size: 16px;
+            position: relative; /* 使子元素相对于此节点定位 */
+            margin-bottom: 20px; /* 增加 Level 2 节点的下间距 */
+        }
+        .level-2 .support-node {
+            background-color: #2196F3; /* 设置为白色 */
+            color: white; /* 设置为黑色 */
+        }
+        .level-2 .pillar-node {
+            background-color: #2196F3; /* 设置为白色 */
+            color: white; /* 设置为黑色 */
+        }
+        .level-3 .node {
+            background-color: #FFC107; /* 子部门颜色 */
+            color: #333;
+            font-size: 14px;
+        }
+        .node:hover {
+            background-color: #1976D2; /* 鼠标悬停时的背景色 */
+            color: #fff; /* 鼠标悬停时的文本颜色 */
+        }
+        .connector {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: #333;
+        }
+        .children {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* 减小子部门之间的间距 */
+            flex-wrap: wrap; /* 允许换行 */
+            max-width: 100%; /* 限制子部门宽度为父节点的宽度 */
+        }
+        .child-connector {
+            width: 2px;
+            height: 20px;
+            background-color: #333;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>GSMC</h1>
+<div class="org-chart">
+    <!-- 第一级: 工厂 -->
+    <div class="level level-1">
+        <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/Site.aspx?source=SiteSettings" class="node">Site</a>
+    </div>
+    <!-- 连接线 -->
+    
+    <!-- 第二级: 生产部门、支持部门、Pillar -->
+    <div class="level level-2">
+        <div class="node">生产部门
+            <div class="children">
+                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/DE%E9%83%A8%E9%97%A8.aspx?source=SiteSettings" class="node">DE</a>
+                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/SE%E9%83%A8%E9%97%A8.aspx?source=SiteSettings" class="node">SE</a>
+                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/PIC%E9%83%A8%E9%97%A8.aspx?source=SiteSettings" class="node">PIC</a>
+            </div>
+        </div>
+        <div class="node support-node">支持部门
+            <div class="children">
+                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/QA%E9%83%A8%E9%97%A8.aspx?source=SiteSettings" class="node">QA</a>
+                <a href="http://example.com/hse" class="node">HSE</a>
+                <a href="http://example.com/eng" class="node">ENG</a>
+                <a href="http://example.com/sno" class="node">SNO</a>
+                <a href="http://example.com/hr" class="node">HR</a>
+                <a href="http://example.com/digital" class="node">Digital</a>
+                <a href="http://example.com/fa" class="node">FA</a>
+            </div>
+        </div>
+        <div class="node pillar-node">Pillar
+            <div class="children">
+                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/AM-Pillar.aspx?source=SiteSettings" class="node">AM</a>
+                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/PM-Pillar.aspx?source=SiteSettings" class="node">PM</a>
+                <a href="http://example.com/hse" class="node">HSE</a>
+                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/HSE-Pillar1.aspx" class="node">IC</a>
+                <a href="http://example.com/e_t" class="node">E&T</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
