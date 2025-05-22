@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f5f5f5;
+            background-color: #ffffff;
         }
         .org-chart {
             display: flex;
@@ -92,13 +92,18 @@
             margin-bottom: 30px;
         }
     </style>
+    <script>
+        function openLink(url) {
+            window.open(url, '_blank'); // 在新标签页中打开链接
+        }
+    </script>
 </head>
 <body>
 <h1>GSMC</h1>
 <div class="org-chart">
     <!-- 第一级: 工厂 -->
     <div class="level level-1">
-        <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/Site.aspx?source=SiteSettings" class="node">Site</a>
+        <div class="node" onclick="openLink('https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/Site.aspx?source=SiteSettings')">Site</div>
     </div>
     <!-- 连接线 -->
     
@@ -106,29 +111,29 @@
     <div class="level level-2">
         <div class="node">生产部门
             <div class="children">
-                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/DE%E9%83%A8%E9%97%A8.aspx?source=SiteSettings" class="node">DE</a>
-                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/SE%E9%83%A8%E9%97%A8.aspx?source=SiteSettings" class="node">SE</a>
-                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/PIC%E9%83%A8%E9%97%A8.aspx?source=SiteSettings" class="node">PIC</a>
+                <div class="node" onclick="openLink('https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/DE%E9%83%A8%E9%97%A8.aspx?source=SiteSettings')">DE</div>
+                <div class="node" onclick="openLink('https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/SE%E9%83%A8%E9%97%A8.aspx?source=SiteSettings')">SE</div>
+                <div class="node" onclick="openLink('https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/PIC%E9%83%A8%E9%97%A8.aspx?source=SiteSettings')">PIC</div>
             </div>
         </div>
         <div class="node support-node">支持部门
             <div class="children">
-                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/QA%E9%83%A8%E9%97%A8.aspx?source=SiteSettings" class="node">QA</a>
-                <a href="http://example.com/hse" class="node">HSE</a>
-                <a href="http://example.com/eng" class="node">ENG</a>
-                <a href="http://example.com/sno" class="node">SNO</a>
-                <a href="http://example.com/hr" class="node">HR</a>
-                <a href="http://example.com/digital" class="node">Digital</a>
-                <a href="http://example.com/fa" class="node">FA</a>
+                <div class="node" onclick="openLink('https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/QA%E9%83%A8%E9%97%A8.aspx?source=SiteSettings')">QA</div>
+                <div class="node" onclick="openLink('http://example.com/hse')">HSE</div>
+                <div class="node" onclick="openLink('http://example.com/eng')">ENG</div>
+                <div class="node" onclick="openLink('http://example.com/sno')">SNO</div>
+                <div class="node" onclick="openLink('http://example.com/hr')">HR</div>
+                <div class="node" onclick="openLink('http://example.com/digital')">Digital</div>
+                <div class="node" onclick="openLink('http://example.com/fa')">FA</div>
             </div>
         </div>
         <div class="node pillar-node">Pillar
             <div class="children">
-                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/AM-Pillar.aspx?source=SiteSettings" class="node">AM</a>
-                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/PM-Pillar.aspx?source=SiteSettings" class="node">PM</a>
-                <a href="http://example.com/hse" class="node">HSE</a>
-                <a href="https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/HSE-Pillar1.aspx" class="node">IC</a>
-                <a href="http://example.com/e_t" class="node">E&T</a>
+                <div class="node" onclick="openLink('https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/AM-Pillar.aspx?source=SiteSettings')">AM</div>
+                <div class="node" onclick="openLink('https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/PM-Pillar.aspx?source=SiteSettings')">PM</div>
+                <div class="node" onclick="openLink('http://example.com/hse')">HSE</div>
+                <div class="node" onclick="openLink('https://pgone.sharepoint.com/sites/SHPlantDigitalSpace/SitePages/HSE-Pillar1.aspx')">IC</div>
+                <div class="node" onclick="openLink('http://example.com/e_t')">E&T</div>
             </div>
         </div>
     </div>
